@@ -1,0 +1,47 @@
+
+.card-img {
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px);
+  float: left;
+  padding-right: 1em;
+  margin-bottom: -1.25em;
+}
+
+.all-the-cards{
+	margin-left: 40px;
+}
+.card{
+	background-color: white;
+	border: 1px solid;
+	width: 600px;
+/*	margin-left: 40px;*/
+	padding-left: 30px;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+/*.card:hover {
+	background-color: red;
+}*/
+
+.card>card-block{
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.kids{
+	margin-left: 40px;
+}
+
+.otp{
+	margin-right: 10px
+}
+
+body{
+	background-color: #eee;
+}

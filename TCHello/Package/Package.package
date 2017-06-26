@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="7a33f678-1eb5-4f2f-b5fe-07a711b787df" 
+        solutionId="7a33f678-1eb5-4f2f-b5fe-07a711b787df" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="TCHello"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="408c1960-a5b4-480f-95c7-2e25bc6afec9" />
+  </features>
+</package>

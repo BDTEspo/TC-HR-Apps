@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Content">
+    <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\forms.css" Url="Content/forms.css" ReplaceContent="TRUE" />
+    <File Path="Content\main.css" Url="Content/main.css" ReplaceContent="TRUE" />
+    <File Path="Content\team.css" Url="Content/team.css" ReplaceContent="TRUE" />
+    <File Path="Content\validation.css" Url="Content/validation.css" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
