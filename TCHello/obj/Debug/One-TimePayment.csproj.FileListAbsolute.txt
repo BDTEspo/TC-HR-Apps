@@ -1,0 +1,3 @@
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\TCHello\TCHello\bin\Debug\TCHello.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\TCHello\TCHello\obj\Debug\TCHello.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\TCHello\TCHello\obj\Debug\TCHello.pdb

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="7a33f678-1eb5-4f2f-b5fe-07a711b787df" SharePointProductVersion="16.0">
+  <FeatureManifests>
+    <FeatureManifest Location="TC-HR-Apps_One-Time Payment\Feature.xml" />
+  </FeatureManifests>
+</Solution>

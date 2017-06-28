@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Teachers College One Time Payment Applications" Id="408c1960-a5b4-480f-95c7-2e25bc6afec9" Scope="Web" Title="One Time Payment" Version="0.0.0.1">
+  <ElementManifests>
+    <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\Default.aspx" />
+    <ElementFile Location="Pages\OTPForm.aspx" />
+    <ElementFile Location="Pages\team.aspx" />
+    <ElementFile Location="Pages\jim_info_form.aspx" />
+    <ElementFile Location="Pages\toby_info_form.aspx" />
+    <ElementManifest Location="Scripts\Elements.xml" />
+    <ElementFile Location="Scripts\App.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.intellisense.js" />
+    <ElementFile Location="Scripts\add_fields.js" />
+    <ElementFile Location="Scripts\form-other-box.js" />
+    <ElementFile Location="Scripts\form-validation.js" />
+    <ElementFile Location="Scripts\office-workers.js" />
+    <ElementFile Location="Scripts\typeahead.js" />
+    <ElementManifest Location="Content\Elements.xml" />
+    <ElementFile Location="Content\App.css" />
+    <ElementFile Location="Content\forms.css" />
+    <ElementFile Location="Content\main.css" />
+    <ElementFile Location="Content\team.css" />
+    <ElementFile Location="Content\validation.css" />
+    <ElementManifest Location="Images\Elements.xml" />
+    <ElementFile Location="Images\AppIcon.png" />
+    <ElementFile Location="Images\logo.jpeg" />
+    <ElementFile Location="Images\logo.png" />
+    <ElementFile Location="Images\user.png" />
+    <ElementManifest Location="Elements.xml" />
+    <ElementFile Location="fonts\glyphicons-halflings-regular.eot" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="Pages\Elements.xml" />
+        <ElementManifest Location="Scripts\Elements.xml" />
+        <ElementManifest Location="Content\Elements.xml" />
+        <ElementManifest Location="Images\Elements.xml" />
+        <ElementManifest Location="Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

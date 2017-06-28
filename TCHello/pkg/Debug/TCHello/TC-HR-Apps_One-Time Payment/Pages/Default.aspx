@@ -138,8 +138,7 @@
     </ul>
   </nav>
   <main>
-    <!-- <h3>Welcome Michael, you are logged in</h3> -->
-     <h3>Welcome <p id="welcomeuser">. uou are logged in</h3>
+    <h3>Welcome Michael, you are logged in</h3>
     <!--  list-style:none; removes the bulleting effect of li's -->
     <ul class="boxes" style="list-style:none;">
       <li class="light-blue-box">

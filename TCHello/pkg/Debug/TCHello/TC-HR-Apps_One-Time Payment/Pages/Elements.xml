@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\OTPForm.aspx" Url="Pages/OTPForm.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Team.aspx" Url="Pages/Team.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\jim_info_form.aspx" Url="Pages/jim_info_form.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\toby_info_form.aspx" Url="Pages/toby_info_form.aspx" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
