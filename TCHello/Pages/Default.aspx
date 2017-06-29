@@ -18,12 +18,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../Content/App.css" />
     <link rel="stylesheet" type="text/css" href="../Content/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms.css">
+    <link rel="stylesheet" type="text/css" href="css/validation.css">
 
     <!-- Add your JavaScript to the following file -->
     <script type="text/javascript" src="../Scripts/App.js"></script>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 
 </asp:Content>
 
@@ -43,11 +46,12 @@
     </div>
 
     <!-- Insert Custom Code Here -->
+  <body>
   <header>
     <div class="container-fluid" id="top-nav">
       <div class="row">
         <div class="col-lg-12 col-md-10 col-sm-12 col-xs-12">
-          <img src="../images/logo.png"  class="img-responsive" alt="Teachers College @ Columbia" />
+          <img src="static/logo.png" class="img-responsive">
         </div>
       </div>
     </div>
@@ -63,18 +67,18 @@
       </button>
     </div>
     <ul class="nav navbar-nav list-inline collapse navbar-collapse hamburger">
-      <li><a href="Default.aspx"  ><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
       <li class="btn-group">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Me<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="https://nam.delve.office.com/?u=df7b7106-dc60-4163-b10f-6d3db573c61e&v=profiledetails" style="color:blue">My Office 365 User Profile</a></li>
+          <li><a href="#" style="color:blue">Example 1</a></li>
           <li><a href="#" style="color:blue">Example 2</a></li>
         </ul>
       </li>
       <!-- all dropdown toggles ul and li have to be wrapped in btn group otherwise it'll contintually point to the same thing -->
       <li class="btn-group">
-        <a href="team.aspx">My Team</a>
-        <!--         <a class="dropdown-toggle" data-toggle="dropdown" href="team.html">My Team<span class="caret"></span></a>
+        <a href="Team.aspx">My Team</a>
+        <!--         <a class="dropdown-toggle" data-toggle="dropdown" href="Team.aspx">My Team<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#" style="color:blue">Organization Chart</a></li>
           <li><a href="#" style="color:blue">Team Details</a></li>
@@ -104,12 +108,12 @@
             <form>
               <div class="form-group">
                 <label for="uni-input">Please enter the employee's UNI</label>
-                <input type="text" class="form-control" id="uni-input" />
+                <input type="text" class="form-control" id="uni-input">
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <a href="toby_info_form.aspx" class="btn btn-primary">Submit</a>
+            <a href="#" class="btn btn-primary" onclick="loadForm()">Submit</a>
             <a href="#" data-dismiss="modal" class="btn btn-primary">Cancel</a>
           </div>
         </div>
@@ -138,8 +142,7 @@
     </ul>
   </nav>
   <main>
-    <!-- <h3>Welcome Michael, you are logged in</h3> -->
-     <h3>Welcome <p id="welcomeuser">. uou are logged in</h3>
+    <h3>Welcome Michael, you are logged in</h3>
     <!--  list-style:none; removes the bulleting effect of li's -->
     <ul class="boxes" style="list-style:none;">
       <li class="light-blue-box">
@@ -173,24 +176,15 @@
         </article>
       </li>
       <br>
-      <!-- <li class="light-green-box">
-        <header>
-          <a href="#"><span class="glyphicon glyphicon-leaf white"></span>
-          <span class="white">Team Performance Reviews</span></a>
-        </header>
-        <article>
-          <ul class="team-performance">
-            <li class="btn-group">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Netra Macron<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Performance Review-FY16/17</a>
-              </ul>
-              </li>
-          </ul>
-        </article>
-        </li> -->
     </ul>
-    </main>
+  </main>
+
+<script language="javascript">
+        function loadForm(){
+    window.location.href = 'OTPForm.aspx' + '?payee_uni=' + $('#uni-input').val();
+  }
+</script>
+</body>
 
 
 

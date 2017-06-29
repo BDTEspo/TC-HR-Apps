@@ -55,7 +55,7 @@
       </button>
     </div>
     <ul class="nav navbar-nav list-inline collapse navbar-collapse hamburger">
-      <li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
       <li class="btn-group">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Me<span class="caret"></span></a>
         <ul class="dropdown-menu">

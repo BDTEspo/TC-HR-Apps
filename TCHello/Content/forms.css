@@ -1,5 +1,14 @@
 .form-control{
 	width: 80%;
+    display: inline;
+}
+
+.form-group{
+    display:inline;
+}
+
+.form-horizontal .control-label {
+    margin-left: 100px;
 }
 
 .typeahead{
@@ -51,4 +60,8 @@
 .tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
     color: #fff;
     background-color: #0097cf;
+}
+
+hr {
+    border-color: blue;
 }

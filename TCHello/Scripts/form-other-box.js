@@ -10,9 +10,9 @@
 function checkValue(value) {
   var otherContainer = $('#other-reason-to-appear')
   if (value === "other") {
-    var otherPaymentReason = '<div class="form-group">' +
+    var otherPaymentReason = //'<div class="form-group">' +
                 '<label class="control-label col-sm-2" for="other-payment-reason">Other Payment Reason:</label>' +
-                '<div class="col-sm-10">' +
+                '<div class="col-sm-8">' +
                   '<input class="form-control" id="other-payment-reason" placeholder="Enter Other Payment Reason">' +
                 '</div>' +
               '</div>'

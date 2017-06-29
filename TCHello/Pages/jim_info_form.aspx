@@ -1,54 +1,34 @@
-﻿<%@ Page language="C#" MasterPageFile="~masterurl/default.master" Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-<%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<!DOCTYPE html>
+<html lang="en">
 
-<%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
-<asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
-    <SharePoint:ScriptLink name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Time Payment - TF</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/forms.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- handlebars cdn -->
+  <!-- handlebars is a templating library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+  <!-- below references and 'loads' the typeahead library -->
+  <script src="js/typeahead.js"></script>
+  <!-- below references the script that the typehead library is used on -->
+  <script src="js/office-workers.js"></script>
+  <script src="js/form-other-box.js"></script>
+  <script src="js/add_fields.js"></script>
+</head>
 
-    <!-- Add your CSS styles to the following file -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/main.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/forms.css" />
-
-    <!-- Add your JavaScript to the following file -->
-    <script type="text/javascript" src="../Scripts/App.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- handlebars cdn -->
-    <!-- handlebars is a templating library -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
-    <!-- below references and 'loads' the typeahead library -->
-    <script type="text/javascript" src="../SCripts/typeahead.js"></script>
-    <!-- below references the script that the typehead library is used on -->
-    <script type="text/javascript" src="../Scripts/office-workers.js"></script>
-    <script type="text/javascript" src="../Scripts/form-other-box.js"></script>
-    <script type="text/javascript" src="../Scripts/add_fields.js"></script>
-
-</asp:Content>
-
-<%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
-<asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Jim's One Time Payment Form
-</asp:Content>
-
-<asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
-    <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="full" Title="loc:full" />
-
-    <div>
-        <p id="welcomeuser">
-            <!-- The following content will be replaced with the user name when you run the app - see App.js -->
-            initializing...
-        </p>
-    </div>
-
-    <header>
+<body>
+  <header>
     <div class="container-fluid" id="top-nav">
       <div class="row">
         <div class="col-lg-12 col-md-10 col-sm-12 col-xs-12">
-          <img src="../Images/logo.png" class="img-responsive" alt="IMG Responsive" />
+          <img src="static/logo.png" class="img-responsive">
         </div>
       </div>
     </div>
@@ -64,7 +44,7 @@
       </button>
     </div>
     <ul class="nav navbar-nav list-inline collapse navbar-collapse hamburger">
-      <li><a href="defealt.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
       <li class="btn-group">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Me<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -74,7 +54,7 @@
       </li>
       <!-- all dropdown toggles ul and li have to be wrapped in btn group otherwise it'll contintually point to the same thing -->
       <li class="btn-group">
-        <a href="team.aspx">My Team</a>
+        <a href="team.html">My Team</a>
         <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Team<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#" style="color:blue">Organization Chart</a></li>
@@ -91,7 +71,7 @@
           <li><a href="#" style="color:blue">Form 3</a></li>
         </ul>
       </li>
-        <div class="modal fade" id="uniModal">
+            <div class="modal fade" id="uniModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -103,12 +83,12 @@
               <form>
                 <div class="form-group">
                   <label for="uni-input">Please enter the employee's UNI</label>
-                  <input type="text" class="form-control" id="uni-input" />
+                  <input type="text" class="form-control" id="uni-input">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <a href="toby_info_form.aspx" class="btn btn-primary">Submit</a>
+              <a href="toby_info_form.html" class="btn btn-primary">Submit</a>
               <a href="#" data-dismiss="modal" class="btn btn-primary">Cancel</a>
             </div>
           </div>
@@ -145,13 +125,13 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="date">Effective Date*:</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="date" />
+              <input type="date" class="form-control" id="date">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="payment-amount">Payment Amount*:</label>
             <div class="col-sm-10">
-              <input type="number" min="0" class="form-control currency" id="payment-amount" placeholder="Enter Payment Amount" />
+              <input type="number" min="0" class="form-control currency" id="payment-amount" placeholder="Enter Payment Amount">
             </div>
           </div>
           <div class="form-group">
@@ -175,13 +155,13 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="payment-comment">Payment Comment:</label>
             <div class="col-sm-10">
-              <input class="form-control" id="payment-comment" placeholder="Enter Comment" />
+              <input class="form-control" id="payment-comment" placeholder="Enter Comment">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="employee">Employee:</label>
             <div class="col-sm-10">
-              <input type="employee" class="form-control typeahead" id="employee" value="Jim Halpert" />
+              <input type="employee" class="form-control typeahead" id="employee" value="Jim Halpert">
             </div>
           </div>
           <div class="form-group">
@@ -193,13 +173,13 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="position">Position:</label>
             <div class="col-sm-10">
-              <input type="position" class="form-control" id="position" value="Assistant Regional Manager" />
+              <input type="position" class="form-control" id="position" value="Assistant Regional Manager">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="position-suffix">Position Suffix:</label>
             <div class="col-sm-10">
-              <input type="position" class="form-control" id="position-suffix" value="TALL" />
+              <input type="position" class="form-control" id="position-suffix" value="TALL">
             </div>
           </div>
           <!--         <div class="form-group">
@@ -211,7 +191,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="index">Index:</label>
             <div class="col-sm-10">
-              <input class="form-control" id="index" placeholder="Enter Index" /> 
+              <input class="form-control" id="index" placeholder="Enter Index"> 
               <button class="add_index_field_button">Add Additional Fields</button>
             </div>
           </div>
@@ -246,7 +226,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2 percentage" for="percentage">Percentage:</label>
             <div class="col-sm-10">
-              <input class="form-control" id="percentage" placeholder="Enter Percentage" />
+              <input class="form-control" id="percentage" placeholder="Enter Percentage">
               <button class="add_percentage_field_button">Add Additional Fields</button>
             </div>
           </div>
@@ -255,7 +235,7 @@
           <div class="form-group">
             <label class="control-label col-sm-2" for="supervisor">Supervisor Name:</label>
             <div class="col-sm-10">
-              <input class="form-control typeahead" id="supervisor" value="Michael Scott" />
+              <input class="form-control typeahead" id="supervisor" value="Michael Scott">
             </div>
           </div>
 <!--           <div class="form-group">
@@ -309,4 +289,6 @@
         </form>
       </div>
   </main>
-</asp:Content>
+</body>
+
+</html>
